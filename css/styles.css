@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif;
+    background-color: rgb(231, 189, 133);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nuevaTarea{
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    display: block; 
+    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif; /* Letra manuscrita */
+}
+
+button{
+    margin: 0 auto;
+    display: block; 
+    background-color: #8add6a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 20px 0px;
+    font-size: 1rem;
+    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #6abf4c;
+}
+
+.tareas{
+    position: relative;
+    background-color: #fff9c4; /* Amarillo bloc de notas */
+    border: 1px solid #fbc02d;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin: 12px 0;
+    min-width: 300px;
+    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif; /* Letra manuscrita */
+    font-size: 1.2rem;
+    color: #444;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+    /* Fondo cuadriculado */
+    background-image:
+        linear-gradient(90deg, rgba(200,200,200,0.15) 1px, transparent 1px),
+        linear-gradient(rgba(200,200,200,0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: center;
+    overflow: visible;
+    text-shadow: 0 1px 0 #bbb, 1px 0 0 #bbb;
+}
+
+
+.tarea{
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre elementos */
+    background: none; /* Hereda el fondo del contenedor */
+    border: none;
+    box-shadow: none;
+    padding: 8px 0;
+    font-size: 1.2rem;
+    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif;
+    color: #444;
+    text-shadow: 0 1px 0 #bbb, 1px 0 0 #bbb;
+    list-style: none;
+}
+
+/* Opcional: mejora el aspecto del checkbox y botón */
+.tarea input[type="checkbox"]{
+    margin-right: 8px;
+    accent-color: #fbc02d;
+}
+
+.tarea .eliminar{
+    margin: 0 0 0 auto;
+    background-color: rgb(248, 103, 103);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@keyframes tachado{
+    0%{
+        text-decoration-color: transparent;
+        color: #444;
+    }
+    60%{
+        text-decoration-color: #444;
+        color: #444;
+    }
+    100%{
+        text-decoration: line-through;
+        text-decoration-color: #444;
+        color: #bbb;
+    }
+}
+
+.tachar {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #444;
+    color: #bbb;
+    animation: tachado 0.5s forwards;
+}
+
+@keyframes borrarGoma{
+    0%{
+        filter: blur(0px);
+        opacity: 1;
+        color: #444;
+        background-color: #fff9c4;
+    }
+    50%{
+        filter: blur(2px);
+        opacity: 0.5;
+        color: #bbb;
+        background-color: #fffde7;
+    }
+    100%{
+        filter: blur(6px);
+        opacity: 0;
+        color: #fff9c4;
+        background-color: #fffde7;
+    }
+}
+
+.borrando{
+    animation: borrarGoma 0.7s forwards;
+}
+
+
