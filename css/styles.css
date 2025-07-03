@@ -24,7 +24,7 @@ body{
     margin: 0 auto;
     margin-bottom: 12px;
     display: block; 
-    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif; /* Letra manuscrita */
+    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif;
 }
 
 button{
@@ -47,13 +47,13 @@ button:hover{
 
 .tareas{
     position: relative;
-    background-color: #fff9c4; /* Amarillo bloc de notas */
+    background-color: #fff9c4;
     border: 1px solid #fbc02d;
     border-radius: 8px;
     padding: 16px 24px;
     margin: 12px 0;
     min-width: 300px;
-    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif; /* Letra manuscrita */
+    font-family: 'Indie Flower', 'Comic Sans MS', cursive, sans-serif;
     font-size: 1.2rem;
     color: #444;
     box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
@@ -61,6 +61,7 @@ button:hover{
     background-image:
         linear-gradient(90deg, rgba(200,200,200,0.15) 1px, transparent 1px),
         linear-gradient(rgba(200,200,200,0.15) 1px, transparent 1px);
+    
     background-size: 24px 24px;
     background-position: center;
     overflow: visible;
@@ -71,8 +72,8 @@ button:hover{
 .tarea{
     display: flex;
     align-items: center;
-    gap: 10px; /* Espacio entre elementos */
-    background: none; /* Hereda el fondo del contenedor */
+    gap: 10px;
+    background: none;
     border: none;
     box-shadow: none;
     padding: 8px 0;
@@ -83,7 +84,6 @@ button:hover{
     list-style: none;
 }
 
-/* Opcional: mejora el aspecto del checkbox y botón */
 .tarea input[type="checkbox"]{
     margin-right: 8px;
     accent-color: #fbc02d;
